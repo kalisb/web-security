@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html en="bg">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+	<script type="text/javascript" src="timing-attacks.js"></script>
+	<script type="text/javascript" src="attack-examples.js"></script>
+	<title>Browser-based Timing Attacks</title>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+		</div>
+		<div class="content">
+			<h1>Browser-based Timing Attacks</h1>
+			<p>Всички примери включват изпълнение на JavaScript.</p>
+			<div id="login" class="entry">
+				<h3>Проверка дали потребителя е логнат</h3>
+				<p>Атаката използва <a href="https://w3c.github.io/resource-timing/#dom-performanceresourcetiming-fetchstart">Resource Timing API</a>.</p>
+				<div class="button custom-select">
+					<select id="login-select">
+						<option value="https://www.facebook.com/messages">Facebook</option>
+						<option value="https://twitter.com/i/notifications">Twitter</option>
+						<option value="https://www.amazon.com/gp/your-account/order-history">Amazon</option>
+						<option value="https://www.instagram.com/explore/">Instagram</option>
+						<option value="https://www.reddit.com/message/inbox/">Reddit</option>
+						<option value="https://www.pinterest.com/settings">Pinterest</option>
+						<option value="https://www.netflix.com/browse">Netflix</option>
+						<option value="https://github.com/stars">GitHub</option>
+					</select>
+				</div><button id="login-button">Check login status</button> <span id="login-result"></span>
+				<pre id="login-debug"></pre>
+			</div>
+			<div id="fb-gender" class="entry">
+				<h3>Определяне на пола използвайки Facebook постове</h3>
+				<p>
+					<button id="fb-gender-button">Определи пола</button> <span id="fb-gender-result"></span>
+				</p>
+				<pre id="fb-gender-debug"></pre>
+			</div>
+			<div id="breach" class="entry">
+				<h3>BREACH ползвайки HEIST</h3>
+				<div class="button custom-select">
+					<select id="breach-select">
+						<option value="https://mail.google.com/mail/u/0/#search/text">GMail</option>
+		                        </select>
+				</div><button id="breach-button">Execute HEIST</button> <span id="breach-result"></span>
+				<pre id="breach-debug"></pre>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</div>
+</body>
+</html>
